@@ -8,6 +8,8 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.util.Objects;
+
 public class UniversitiesSearchTest {
     Universities universities;
     Response response;
@@ -24,7 +26,7 @@ public class UniversitiesSearchTest {
     public String getStateProvincePath()
     {
         universityName = response.jsonPath().getString(universityNamePath);
-        if (universityName == "University of Witwatersrand")
+        if (Objects.equals(universityName, "University of Witwatersrand"))
         {
             stateProvince = response.jsonPath().getString(stateProvincePath);
         }
