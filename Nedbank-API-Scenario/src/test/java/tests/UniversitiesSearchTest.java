@@ -36,7 +36,7 @@ public class UniversitiesSearchTest {
     @Test
     public void getStateProvince() {
         response = universities.getUniversities();
-        System.out.println(response.toString());
+        System.out.println(response.asPrettyString());
     }
 
 }
